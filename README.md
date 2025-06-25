@@ -1,2 +1,2 @@
-This repository was created to preserve and share experiences in learning templates and the basics of metaprogramming in c++.
-I will be very glad to see your suggestions for improving my code and ideas for new implementations.
+In this branch, I tried to implement factorial functions that work with all real numeric types (without char, string, etc.). 
+The goal is to create a function that has the ability to calculate the factorial in compile-time, if possible, otherwise in runtime.
