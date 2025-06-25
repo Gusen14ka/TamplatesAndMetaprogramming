@@ -1,0 +1,2 @@
+This repository was created to preserve and share experiences in learning templates and the basics of metaprogramming in c++.
+I will be very glad to see your suggestions for improving my code and ideas for new implementations.
