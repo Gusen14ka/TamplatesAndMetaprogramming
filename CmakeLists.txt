@@ -9,8 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF) # выключаем MSVC расширения, ч
 
 # Добавляем исполняемый target
 add_executable(templateFactorial
-    "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial
-    /cpp/templateFactorial.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial/cpp/templateFactorial.cpp"
 )
 
 # Указываем, где лежат наши .hpp
