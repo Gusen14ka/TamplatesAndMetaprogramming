@@ -1,5 +1,5 @@
 #include <iostream>
-#include "hpp/templateFactorial.hpp"
+#include "../hpp/templateFactorial.hpp"
 
 int main(){
     try {

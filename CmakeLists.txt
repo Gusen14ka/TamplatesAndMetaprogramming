@@ -6,20 +6,16 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # выключаем MSVC расширения, чтобы код был максимально переносим
 
-# Собираем .cpp
-file(GLOB_RECURSE SOURCES
-    "${CMAKE_CURRENT_SOURCE_DIR}/cpp/*.cpp"
-)
 
 # Добавляем исполняемый target
-add_executable(${PROJECT_NAME}
-    "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
-    ${SOURCES}
+add_executable(templateFactorial
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial
+    /cpp/templateFactorial.cpp"
 )
 
 # Указываем, где лежат наши .hpp
-target_include_directories(${PROJECT_NAME}
+target_include_directories(templateFactorial
     PRIVATE
-        "${CMAKE_CURRENT_SOURCE_DIR}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial"
 )
 
