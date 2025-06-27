@@ -1,9 +1,9 @@
-In this branch, I tried to implement a template class TypeList<Ts...>, which is a container for types of an unknown number of parameters. I have implemented functions for this class:
+# # template Print
 
-1) Length<TypeList> (the length of the list)
+This brach implements utilities for beautifully outputting tuples (tuple-like types) into an output stream (`std::ostream`) using C++20 templates and concepts.
 
-2) PushFront<Type List, New> (add type to the beginning)
+## Features
 
-3) indexOf<TypeList, T> (type position in the list or -1)
-
-4) Erase<Type List, T> (delete all occurrences of the type)
+- Automatic output of the contents of tuples of any size via the overloaded operator `<<'.
+- Using fold expressions and universal templates to support any tuple-like types.
+- Compatible with `std::tuple', `std::pair` and custom tuple-like types.
