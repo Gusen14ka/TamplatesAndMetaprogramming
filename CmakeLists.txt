@@ -11,10 +11,17 @@ set(CMAKE_CXX_EXTENSIONS OFF) # выключаем MSVC расширения, ч
 add_executable(templateFactorial
     "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial/cpp/templateFactorial.cpp"
 )
+add_executable(templateTypeList
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateTypeList/cpp/templateTypeList.cpp"
+)
 
 # Указываем, где лежат наши .hpp
 target_include_directories(templateFactorial
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/templateFactorial"
+)
+target_include_directories(templateTypeList
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/templateTypeList"
 )
 
