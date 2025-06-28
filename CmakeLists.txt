@@ -17,6 +17,9 @@ add_executable(templateTypeList
 add_executable(templatePrint
     "${CMAKE_CURRENT_SOURCE_DIR}/templatePrint/cpp/templatePrint.cpp"
 )
+add_executable(templateAdd
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateAdd/cpp/templateAdd.cpp"
+)
 
 # Указываем, где лежат наши .hpp
 target_include_directories(templateFactorial
@@ -30,5 +33,9 @@ target_include_directories(templateTypeList
 target_include_directories(templatePrint
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/templatePrint"
+)
+target_include_directories(templateAdd
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/templateAdd"
 )
 
