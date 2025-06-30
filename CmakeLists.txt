@@ -20,6 +20,9 @@ add_executable(templatePrint
 add_executable(templateAdd
     "${CMAKE_CURRENT_SOURCE_DIR}/templateAdd/cpp/templateAdd.cpp"
 )
+add_executable(templateMyTypeTraits
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateMyTypeTraits/cpp/templateMyTypeTraits.cpp"
+)
 
 # Указываем, где лежат наши .hpp
 target_include_directories(templateFactorial
@@ -37,5 +40,9 @@ target_include_directories(templatePrint
 target_include_directories(templateAdd
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/templateAdd"
+)
+target_include_directories(templateMyTypeTraits
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/templateMyTypeTraits"
 )
 
