@@ -23,6 +23,9 @@ add_executable(templateAdd
 add_executable(templateMyTypeTraits
     "${CMAKE_CURRENT_SOURCE_DIR}/templateMyTypeTraits/cpp/templateMyTypeTraits.cpp"
 )
+add_executable(templatePolicyVector
+    "${CMAKE_CURRENT_SOURCE_DIR}/templatePolicyVector/cpp/templatePolicyVector.cpp"
+)
 
 # Указываем, где лежат наши .hpp
 target_include_directories(templateFactorial
@@ -44,5 +47,9 @@ target_include_directories(templateAdd
 target_include_directories(templateMyTypeTraits
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/templateMyTypeTraits"
+)
+target_include_directories(templatePolicyVector
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/templatePolicyVector"
 )
 
