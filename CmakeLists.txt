@@ -26,6 +26,9 @@ add_executable(templateMyTypeTraits
 add_executable(templatePolicyVector
     "${CMAKE_CURRENT_SOURCE_DIR}/templatePolicyVector/cpp/templatePolicyVector.cpp"
 )
+add_executable(templateJsonParser
+    "${CMAKE_CURRENT_SOURCE_DIR}/templateJsonParser/cpp/templateJsonParser.cpp"
+)
 
 # Указываем, где лежат наши .hpp
 target_include_directories(templateFactorial
@@ -51,5 +54,9 @@ target_include_directories(templateMyTypeTraits
 target_include_directories(templatePolicyVector
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/templatePolicyVector"
+)
+target_include_directories(templateJsonParser
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/templateJsonParser"
 )
 
