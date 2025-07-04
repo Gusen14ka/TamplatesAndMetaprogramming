@@ -12,6 +12,7 @@ concept NumericIntegral =
     || std::same_as<short, T> || std::same_as<unsigned short, T>;
 
 
+/*
 // No-type template function for factorial
 // This function computes the factorial of a non-negative numeric integer at compile time.
 template<auto val>
@@ -46,6 +47,20 @@ constexpr T factorial (T val){
     else{
         return val * factorial(val - 1);
     }
+}
+*/
+
+// Function for integral numeric types with integer_sequence implementation
+template<NumericIntegral T, T...Vals>
+consteval T factorial_impl(std::integer_sequence<T, Vals...>){
+    return ((Vals + 1) * ... * 1); // Using fold expression to compute factorial
+}
+
+// Wrapper function for compile-time factorial calculation
+template<auto val>
+consteval auto factorial(){
+    static_assert(val >= 0, "Factorial is not defined for negative numbers.");
+    return factorial_impl(std::make_integer_sequence<decltype(val), val>());
 }
 
 // Overloaded factorial function for floating-point types at runtime
